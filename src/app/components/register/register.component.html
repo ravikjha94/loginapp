@@ -1,0 +1,37 @@
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Register</h3>
+      </div>
+      <div class="card-body">
+        <form name="form" (ngSubmit)="registeruser()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" required  pattern="[^ @]*@[^ @]*" [class.is-invalid]="email.invalid && email.touched" #email="ngModel" class="form-control" name="email" [(ngModel)]="registeruserdata.email" type="text"  />
+                 <div *ngIf="(email.invalid && email.touched)" class="invalid-feedback"> 
+                    <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+                    <small class="text-danger" *ngIf="email.errors.pattern">Email must be a valid email address</small>
+                 </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"  required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control" name="password" [(ngModel)]="registeruserdata.password"  minlength="6" />
+                <div *ngIf="password.errors && password.invalid" class="invalid-feedback">
+                    <div *ngIf="password.errors.required">Password is required</div>
+                    <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    
+                </div>
+            </div>
+            <div class="form-group">
+              <div>
+                 
+                <button [disabled]="f.form.invalid" type="submit" class="btn btn-primary">Register</button>
+            </div>
+            </div>
+            </form>
+
+      </div>
+     </div>
+    </div>
+  </div>

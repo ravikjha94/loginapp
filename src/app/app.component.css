@@ -1,0 +1,13 @@
+body {
+    background:url(/background1.jpg) no-repeat;
+    padding-top:100px;
+    background-size:cover;
+  }
+  
+  .navbar {
+    background:none;
+  }
+  
+  #first-jumbo {
+    text-align:center;
+  }

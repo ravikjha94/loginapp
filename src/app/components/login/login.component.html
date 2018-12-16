@@ -1,0 +1,25 @@
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">login</h3>
+      </div>
+      <div class="card-body">
+        <form>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input [(ngModel)]="loginuserdata.email" name="email" type="text" class="form-control rounded-0" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input [(ngModel)]="loginuserdata.password" name="password" type="password" class="form-control  rounded-0" id="pwd">
+        </div>
+        <button (click)="loginuser()" type="submit" class="btn btn-success rounded-0">Login</button>
+      </form>
+      </div>
+      </div>
+      
+    </div>
+
+</div>
+

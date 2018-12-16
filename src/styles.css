@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background:url(/background1.jpg) no-repeat;
+    padding-top:100px;
+    background-size:cover;
+  }
+  h1 {
+      color: blueviolet;
+      text-align: center;
+      padding-top: 50mm;
+      
+  }
